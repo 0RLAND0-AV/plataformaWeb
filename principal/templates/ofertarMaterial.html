@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Materiales de Construcción</title>
+    <link rel="stylesheet" href="ofertar-material.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <header>
+        <img src="LogoIS_Oficial.png" alt="Logo de la Tienda" class="header-image">
+        <h1></h1>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </label>
+        <nav>
+            <ul class="nav-list" id="nav-list">
+                <li><a href="#home">Inicio <ion-icon name="home-outline"></ion-icon> </a></li>
+                <li><a href="#carrito"> Carrito <ion-icon name="cart-outline"></ion-icon></a> </li>
+                <li><a href="ofertar-material.html">User1 <ion-icon name="person-circle-outline"></ion-icon> </a></li>
+
+        </nav> 
+        <div class="search-container">
+            <input type="text" placeholder="Buscar productos..." class="search-input">
+            <button class="search-button">Buscar <ion-icon name="search-outline"></ion-icon></button>
+        </div>
+    </header>
+    
+    
+    
+  
+    
+
+    
+    <div class="formulario-ofertar-material">
+        <h2>Ofertar Material</h2>
+        <form id="ofertaForm" action="procesar_oferta.py" method="post">
+            <div class="form-group inline">
+                <label for="departamento">Departamento:</label>
+                <select id="departamento" name="departamento" required>
+                    <option value="" disabled selected>Seleccionar Departamento</option>
+                    <option value="La Paz" data-provincias='["Murillo", "Los Andes", "Franz Tamayo", "Omasuyas", "Manco Kapac", "Muñecas", "Larecaja", "Caranavi", "Nor Yungas", "Sud Yungas", "Gualberto Villarroel"]'>La Paz</option>
+                    <option value="Cochabamba" data-provincias='["Cercado", "Chapare", "Quillacollo", "Esteban Arce", "Capinota", "Ayopaya", "Mizque", "Arque", "Carrasco", "Punata"]'>Cochabamba</option>
+                    <option value="Santa Cruz" data-provincias='["Andrés Ibáñez", "Chiquitos", "Guarayos", "Ñuflo de Chávez", "Velasco", "Ángel Sandoval", "Germán Busch"]'>Santa Cruz</option>
+                    <option value="Tarija" data-provincias='["Cercado", "Gran Chaco", "Aniceto Arce", "Eustaquio Méndez", "José María Avilés"]'>Tarija</option>
+                    <option value="Oruro" data-provincias='["Oruro", "Carangas", "Ladislao Cabrera", "Tomas Barrón", "Sebastián Pagador"]'>Oruro</option>
+                    <option value="Potosi" data-provincias='["Tomás Frías", "Nor Lípez", "Sud Lípez", "Daniel Campos", "Antonio Quijarro", "Potosí", "Chayanta", "Rada", "Alonso de Ibáñez"]'>Potosí</option>
+                    <option value="Pando" data-provincias='["Federico Román", "Madre de Dios", "Nicolás Suárez"]'>Pando</option>
+                    <option value="Beni" data-provincias='["Cercado", "Vaca Diez", "Marbán", "Moxos", "Yacuma", "Mamoré", "Gutiérrez"]'>Beni</option>
+                    <option value="Chuquisaca" data-provincias='["Sucre", "Yamparáez", "Azurduy", "Zudáñez", "Cinti", "Hernando Siles", "Luis Calvo"]'>Chuquisaca</option>
+                </select>
+                
+                <label for="provincia">Provincia:</label>
+                <select id="provincia" name="provincia" required>
+                    <option value="" disabled selected>Seleccionar Provincia</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="urlMapa">Dirección:</label>
+                <input type="text" id="urlMapa" name="urlMapa" placeholder="https://www.google.com/maps/..." required>
+            </div>
+            
+            <div class="form-group">
+                <label for="material">Tipo de Material:</label>
+                <select id="material" name="material" required>
+                    <option value="" disabled selected>Seleccionar Categoría</option>
+                    <option value="cementos">Acero</option>
+                    <option value="maderas">Tejas y cubiertas</option>
+                    <option value="ladrillos">Cemento y complemento</option>
+                    <option value="fierros">Ladrillos y bloques</option>
+                    <option value="fierros">Arena</option>
+
+
+
+                </select>
+            </div>
+    
+            <div class="form-group inline">
+                
+                <div>
+                    <label for="precio">Precio:</label>
+                    <input type="number" id="precio" name="precio" placeholder="Precio Total (Bs)" required>
+                </div>
+            </div>
+            
+            
+            <div>
+                <label for="archivo">Subir Archivo(s):</label>
+                <input type="file" id="archivo" name="archivo" required accept=".png, .jpeg" multiple>
+                
+            </div>
+            
+            
+            
+    
+            <div>
+                <label for="estado">(Opcional) Estado:</label>
+                <select id="estado" name="estado">
+                    <option value="" disabled selected>Seleccionar Estado</option>
+                    <option value="nuevo">Nuevo</option>
+                    <option value="seminuevo">Seminuevo</option>
+                    <option value="usado">Usado</option>
+                    <option value="con_detalles">Con detalles</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="descripcion">Descripcion:</label>
+                <textarea id="descripcion" name="descripcion" placeholder="Añade una pequeña descripcion..." rows="3" maxlength="250"> 
+                </textarea>
+                
+            </div>
+    
+            <div class="checkbox-container">
+                <input type="checkbox" id="terminos" name="terminos" checked />
+                <label for="terminos">Acepto las <a href="login.html">Condiciones del servicio y la Política de Privacidad</a></label>
+            </div>
+
+
+
+
+            <div class="button-container">
+                <button type="submit">Ofertar</button>
+                <button type="button">Cancelar</button>
+            </div>
+        </form>
+    </div>
+    
+
+
+    
+    
+
+
+
+    
+
+    <footer>
+        <p>&copy; 2024 Tienda de Materiales de Construcción. Todos los derechos reservados.</p>
+        <p>Síguenos en nuestras redes sociales:</p>
+        <p>
+            <a href="">Facebook</a> | 
+            <a href="#">Instagram</a> | 
+            <a href="#">Twitter</a>
+        </p>
+    </footer>
+
+
+
+
+    <script src="ofertar-material.js"></script>
+</body>
+</html>

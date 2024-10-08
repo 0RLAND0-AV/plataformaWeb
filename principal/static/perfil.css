@@ -1,0 +1,497 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que el padding y el margen no afecten el ancho */
+}
+
+html, body {
+    height: 100%; /* 100% de altura */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column; /* Organiza los hijos en columna */
+    min-height: 100vh; /* Mínimo 100% de la altura de la ventana */
+}
+
+header {
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #02735E;
+    color: #fff;
+    padding: 2px;
+    z-index: 10;
+    
+   
+}
+
+article {
+    flex: 1; /* Permite que el artículo crezca */
+}
+
+.header-image {
+    width: 90px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+}
+
+.menu-toggle {
+    display: none; /* Oculta el checkbox */
+}
+
+.menu-icon {
+    display: none; /* Oculta el icono del menú hamburguesa en escritorio */
+    flex-direction: column;
+    cursor: pointer;
+    position:relative;
+    z-index:11;
+}
+
+.menu-icon .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Mueve el menú a la derecha */
+    
+    
+}
+
+.nav-list {
+    display: flex; /* Muestra la lista de navegación */
+    align-items: center;/*aumento*/
+}
+
+.nav-list li {
+    display: inline-block;
+    
+}
+
+.nav-list a {
+    /*display: flex;*/
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 2px;
+    transition: background 0.3s ease;
+    box-shadow: 0 1px 5px 1px rgb(9, 78, 46);
+    border-radius: 5px;
+    margin: 5px;
+    flex-wrap: wrap;
+}
+
+.nav-list a:hover {
+    color: white;
+    background: #F27405;
+}
+.nav-list a :active{
+    background: #F27405;
+}
+ion-icon{
+    padding: 4px;
+    }
+
+
+
+
+    /*BUSCADOR*/
+.search-container {
+    position: fixed;
+    top: 2%;
+    left: 20%;
+    display: flex;
+    
+    justify-content: center;
+    margin: 15px 0; /* Espacio arriba y abajo */
+
+   
+    
+}
+.search-container {
+    position: fixed;
+    top: 2%;
+    left: 20%;
+    display: flex;
+    justify-content: center;
+    margin: 15px 0; /* Espacio arriba y abajo */
+   
+    
+}
+
+.search-input {
+    padding: 10px;
+    width: 350px; /* Ancho del campo de búsqueda */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    border-radius: 50px;
+    
+}
+
+.search-button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    background-color: #02735E;
+    box-shadow: 1px 1px 5px 2px #014040;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color:orange;
+}
+/*
+
+*/
+.boton-foto {
+    margin: 10px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+    text-align: center; /* Centrar el texto */
+    display: inline-block; /* Permitir que se ajuste como un botón */
+}
+
+.button:hover {
+    background-color: #45a049; /* Color de fondo al pasar el mouse */
+}
+
+/*PERFIL*/
+.menu-perfil {
+    width: 20%;
+    background-color: #02735E; /* Verde oscuro */
+    padding-top: 40px;
+    height: calc(100vh - 60px); /* Ajusta la altura para descontar el header */
+    box-sizing: border-box;
+    position: fixed; /* Fija el aside al lado izquierdo */
+    top: 90px; /* Desplaza el aside hacia abajo, dejando espacio para el header */
+    left: 0;
+    z-index: 1; /* Asegura que no quede por encima del header */
+    color: #fff;
+}
+
+.lista-perfil {
+    list-style-type: none;
+    padding: 0px;    
+}
+
+.lista-perfil li {
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    
+   
+      
+}
+.lista-perfil li a {
+    color: #fff; /* Cambia el color del texto de los enlaces a blanco */
+    text-decoration: none; /* Opcional: elimina el subrayado de los enlaces */
+    display: block;
+    padding-left: 10px;
+    width: 100%;
+    box-sizing: borde-box;
+    
+}
+.lista-perfil :active {
+    background-color: #F27405; /* Naranja */
+}
+.lista-perfil li:hover{
+    background-color: #03A678
+    
+}
+
+.menu-perfil img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+.datos-edicion {
+    display: flex; /* Convierte el artículo en un contenedor flex */
+    width: 70%; /* Ocupa el 70% del espacio restante */
+    margin-left: 25%; /* Deja espacio para el aside a la izquierda */
+    padding: 20px;
+    flex-wrap: wrap;
+    margin-top :6.25rem;/*aumente*/
+   
+    
+}
+
+.datos-edicion section {
+    margin-bottom: 20px;
+    
+    min-width: 300px
+   
+}
+
+/* Estilo de los botones y etiquetas */
+.boton-foto button{
+    padding: 5px 10px;
+    background-color: #F27405;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: #F27405;
+}
+
+label {
+    display: inline-block;
+    width: 50px;
+}
+
+span {
+    margin-right: 10px;
+}
+/*lo ulatimo*/
+.datos-edicion {
+    display: flex; /* Convierte el artículo en un contenedor flex */
+    margin-top: 6.25rem;
+    
+}
+
+.imagen-de-perfil {
+    width: 40%; /* Ajusta el ancho según tus necesidades */
+    margin-right: 1.25rem; /* Espacio entre la imagen y los datos */    
+}
+
+.edicion-foto img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho de su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+.boton-foto {
+    display: flex; /* Para centrar el botón, si es necesario */
+    align-items: center; /* Centra verticalmente */
+}
+.edicion-foto{
+    max-width: 100%; /* Asegura que el contenedor de la imagen no exceda el ancho de su sección */
+    overflow: hidden;
+}
+.perfil-datos {
+    width: 55%; /* Ajusta el ancho según tus necesidades */
+    margin-top: 100px;
+   
+}
+.form-nombre, .form-celular, .form-correo {
+    display: flex;
+    
+    align-items: center;
+    
+}
+
+/* Estilos específicos para los campos de texto y correo electrónico dentro del perfil */
+.datos-edicion input[type="text"],
+.datos-edicion input[type="email"] {
+    width: 70%; /* Mismo tamaño que el span */
+    padding: 5px;
+    border: 2px solid #00A77C; /* Añade un borde al input */
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+.label-y-span {
+    display:flex;
+    flex-direction: column; /* Coloca el label y el span en columna */
+    flex-grow: 1;
+    
+}
+
+label {
+    margin-top: 20px;
+    display: flex; /* Asegura que el label esté arriba del span */
+   
+    margin-bottom: 5px;
+}
+
+span {
+    
+    background-color: #03A678; /* Fondo verde para los spans */
+    color: white; /* Color del texto blanco dentro del span */
+    padding: 10px;
+    flex-grow: 1; /* Hace que el span ocupe el espacio disponible */
+    
+    
+    
+}
+
+.perfil-datos button {
+    padding: 5px 10px;
+    background-color: #F27405; /* Naranja para los botones */
+    margin-top: 50px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    flex-shrink: 0; /* Evita que el botón se reduzca */
+    font-size: 20px;
+    
+}
+
+.edicion-foto img {
+    width: 400px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block;
+    margin-bottom: 10px; /* Espacio entre la imagen y el botón */
+}
+
+
+.boton-foto button  {
+    padding: 5px 10px;
+    background-color: #F27405;
+    color: white;
+    border: none;
+    border-radius: 10px; /* Bordes redondeados */
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 180px;
+    
+}
+
+.imagen-de-perfil button:hover {
+    background-color: #F27405;
+}
+
+footer {
+    background-color: #02735E;
+    color: #fff;
+    text-align: center;
+    padding: 1.25rem;
+    width: 100%;
+    
+}
+
+footer p {
+    margin: 5px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 79%;
+        background-color: #02735E;
+        width: 50px;
+        padding: 1px 0;
+    }
+
+    .menu-icon {
+        display: flex;
+        position: absolute; /* Para colocarlo sobre otros elementos */
+        top: 10px; /* Ajusta según la altura que necesites */
+        right: 0px;
+        z-index: 11; /* Asegura que esté por encima del buscador */
+        
+    }
+    .search-container {
+        position: absolute;
+        top: 10px; /* Deja espacio suficiente para el ícono de la hamburguesa */
+        left: 100px;
+        z-index: 10; /* Coloca el buscador por debajo del ícono de hamburguesa */
+    }
+    #menu-toggle:checked + .menu-icon + nav .nav-list {
+        display: flex;
+        position: absolute;
+        width: 100%; /* Asegura que ocupe todo el ancho */
+        z-index: 100;
+    }
+
+    .nav-list li {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .nav-list a {
+        padding: 15px 20px;
+        width: 100%;
+    }
+
+
+    .datos-edicion {
+    width: 100%;
+    margin-left: 0;
+    }
+
+    .menu-perfil {
+        width: 100%;
+        height: auto;
+        position: relative;
+        
+    }
+
+    .perfil-datos, .imagen-de-perfil {
+        width: 100%;
+        margin: 0;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .search-input {
+        width: 200px;
+    }
+
+    .datos-edicion {
+        flex-direction: column;
+    }
+
+    .imagen-de-perfil {
+        width: 100%;
+    }
+
+    .perfil-datos {
+        width: 100%;
+        margin-top: 20px;
+    }
+    footer {
+        background-color: #02735E;
+        color: #fff;
+        text-align: center;
+        padding: 1.25rem;
+        width: 100%;
+        position: relative; /* Para que no se superponga con el contenido */
+
+    }
+
+    
+    
+    
+}

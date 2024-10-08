@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #02735E;
+    color: #fff;
+    padding: 2px;
+    z-index: 10;
+}
+
+.header-image {
+    width: 90px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+.menu-toggle {
+    display: none; /* Oculta el checkbox */
+}
+
+.menu-icon {
+    display: none; /* Oculta el icono del menú hamburguesa en escritorio */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Mueve el menú a la derecha */
+}
+
+.nav-list {
+    display: flex; /* Muestra la lista de navegación */
+}
+
+.nav-list li {
+    display: inline-block;
+}
+.nav-list a {
+    display: flex;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 2px;
+    transition: background 0.3s ease;
+    box-shadow: 0 1px 5px 1px rgb(9, 78, 46);
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.nav-list a:hover {
+    color: white;
+    background: #014040;
+}
+.nav-list a :active{
+    background: orange;
+}
+ion-icon{
+    padding: 4px;
+    }
+/*BUSCADOR DE PRODUCTOS*/
+.search-container {
+    position: fixed;
+    top: 2%;
+    left: 20%;
+    display: flex;
+    justify-content: center;
+    margin: 15px 0; /* Espacio arriba y abajo */
+    
+   
+    
+}
+
+.search-input {
+    padding: 10px;
+    width: 350px; /* Ancho del campo de búsqueda */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    border-radius: 50px;
+    
+}
+
+.search-button {
+    padding: 9px 13px;
+    margin-left: 10px;
+    background-color: #02735E;
+    box-shadow: 1px 1px 5px 2px #014040;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color:orange;
+}
+
+
+
+
+
+
+
+.formulario-ofertar-material {
+    width: 60%; /* Ancho reducido para hacer el formulario más estrecho */
+    margin: 130px auto 0; /* Centrado y margen superior */
+    margin-bottom: 35px;
+    padding: 15px; /* Espaciado interno reducido */
+    background-color: white; /* Fondo blanco */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.formulario-ofertar-material h2 {
+    text-align: center; /* Centrado del título */
+    color: #02735E; /* Color del título */
+    margin-bottom: 15px; /* Menos espacio debajo del título */
+    font-size: 18px; /* Tamaño de letra reducido */
+}
+
+.formulario-ofertar-material div {
+    margin-bottom: 10px; /* Menos espacio entre campos */
+}
+
+.formulario-ofertar-material label {
+    display: block; /* Cada etiqueta ocupa una línea */
+    margin-bottom: 5px; /* Espacio reducido debajo de las etiquetas */
+    font-weight: bold; /* Negrita */
+    color: #333; /* Color del texto */
+    font-size: 16px; /* Tamaño de fuente reducido */
+}
+
+
+
+
+
+
+
+.formulario-ofertar-material select,
+.formulario-ofertar-material input {
+    width: 100%; /* Ancho completo */
+    padding: 8px; /* Espaciado interno reducido */
+    border: 1px solid #ccc; /* Borde suave */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 14px; /* Tamaño de fuente reducido */
+}
+
+.formulario-ofertar-material input::placeholder {
+    color: #aaa; /* Color del placeholder */
+}
+
+.formulario-ofertar-material button {
+    background-color: #02735E; /* Color del botón */
+    color: white; /* Color del texto */
+    padding: 8px 12px; /* Espaciado interno reducido */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    font-size: 14px; /* Tamaño de fuente reducido */
+    transition: background-color 0.3s; /* Transición suave */
+    width: 100%; /* Ancho completo */
+}
+
+.formulario-ofertar-material button:hover {
+    background-color: orange; /* Color al pasar el mouse */
+}
+
+.checkbox-container {
+    display: flex; /* Usa flexbox para alinear elementos en línea */
+    align-items: center; /* Alinea verticalmente los elementos al centro */
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 20px;
+    width: 20px; /* Ajusta el ancho */
+    height: 20px; /* Ajusta la altura */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el checkbox */
+}
+
+.button-container {
+    display: flex; /* Habilita flexbox */
+    justify-items: center; /* Centra los elementos horizontalmente */
+    gap: 10px; /* Espacio entre los botones */
+}
+
+.button-container button {
+    margin: 30 50px; /* Espacio entre los botones */
+}
+
+.formulario-ofertar-material .form-group {
+    margin-bottom: 10px; /* Menos espacio entre campos */
+}
+
+.formulario-ofertar-material .form-group.inline {
+    display: flex; /* Usar flexbox para alinear elementos en línea */
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+.formulario-ofertar-material .form-group.inline div {
+    flex: 1; /* Hace que los elementos ocupen el mismo ancho */
+}
+textarea {
+    width: 100%; /* Ancho completo */
+    padding: 0.5rem; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde suave */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
+    resize: vertical; /* Permitir cambiar el tamaño solo verticalmente */
+}
+
+
+
+
+
+
+
+
+
+/*PARA CELULARES*/
+/* Estilos para el menú hamburguesa */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none; /* Oculta el menú por defecto */
+        flex-direction: column;
+        background-color: #014040;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+    }
+    .menu-icon {
+        display: flex; /* Muestra el icono en móvil */
+        position: absolute;
+        right: 5%;
+    }
+    #menu-toggle:checked + .menu-icon + nav .nav-list {
+        display: flex; /* Muestra el menú cuando el checkbox está activado */
+        width: 150px;
+        position: absolute;
+        left: 72%;
+        top: 95px;
+        border-radius: 5px;
+    }
+
+    /*menu caterogiria posision en la parte inferior del menu*/
+    .menu-categoria {
+        display: flex;
+        width: 100%;
+        max-height: 60px;
+        position: fixed;
+        z-index:2;
+    }
+    .menu-categoria:hover{
+        max-height: 130px;
+        overflow: hidden; /* Desactiva el scroll */
+    }
+    .nombre-categoria{
+        display: inline-block;
+        justify-content: space-between;
+        position: fixed;
+    }
+    .formulario-ofertar-material {
+        width: 150% ; /* Ancho reducido para hacer el formulario más estrecho */
+        
+    }
+    footer {
+        margin-top: auto; 
+        width: 150%; /* Ancho reducido para hacer el  más estrecho */
+        
+    }
+}
+
+
+
+/*BUSCADOR DE PRODUCTOS*/
+.search-container {
+    left: 20%;
+}
+
+.search-input {
+    width: 250px; /* Ancho del campo de búsqueda */
+}
+
+.search-button{
+    width: 65px;
+    height: 40px;
+}
+
+
+
+/*SECCION DE PIE DE PAGINA*/
+footer {
+    background-color: #02735E;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto; /* Empuja el footer hacia abajo */
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+

@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil</title>
+  <link rel="stylesheet" href="{% static 'perfil.css' %}">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> 
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <header>
+        <img src="{% static 'LogoIS_Oficial.png' %}" alt="Logo de la Tienda" class="header-image">
+        
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </label>
+        <nav>
+            <ul class="nav-list" id="nav-list">
+                <li><a href="{% url 'index' %}">Inicio <ion-icon name="home-outline"></ion-icon> </a></li>
+                <li><a href="carrito"> Carrito <ion-icon name="cart-outline"></ion-icon></a> </li>
+            </ul>
+        </nav> 
+        <div class="search-container">
+            <input type="text" placeholder="Buscar productos..." class="search-input">
+            <button class="search-button">Buscar <ion-icon name="search-outline"></ion-icon></button>
+        </div>
+    </header>
+    <article class="datos-edicion">
+        <section id="imagen-perfil" class="imagen-de-perfil">
+            <div class="edicion-foto" id="foto-perfil">
+                <img src="{{ usuario.imagenPerfil.url }}" class="imagen-article">
+            </div>
+            <div class="boton-foto" id="boton-para-foto">
+                <input type="file" name="imagenPerfil" id="imagenPerfil" style="display: none;">
+                <button type="button" id="editar-imagen">Editar</button> <!-- Botón para cambiar imagen -->
+            </div>
+            <img id="preview" src="" alt="Vista previa" style="display: none; max-width: 200px; margin-top: 10px;"> <!-- Imagen de vista previa -->
+            
+
+
+
+        </section>
+        <section id="datos-perfil" class="perfil-datos">
+            <div class="form-nombre">
+                <div class="label-y-span">
+                    <label for="nombre-completo">Nombre Completo:</label>
+                    <span id="nombreCompleto">{{ usuario.username }}</span>
+                </div>
+                <button id="editar-nombre">Editar</button>
+            </div>
+            <div class="form-celular">
+                <div class="label-y-span">
+                    <label for="numero-celular">Número de Celular:</label>
+                    <span id="numeroCelular">{{ usuario.numeroCelular }}</span>
+                </div>   
+                <button id="editar-celular">Editar</button>
+            </div>
+            <div class="form-correo">
+                <div class="label-y-span">
+                    <label for="correoElectronico">Correo Electrónico:</label>
+                    <span id="correoElectronico">{{ usuario.email }}</span>
+                </div>
+                <button id="editar-correo">Editar</button>
+            </div>
+        </section>
+    </article>
+    
+    <aside class="menu-perfil">
+        <img src="{{ usuario.imagenPerfil.url }}">
+        <ul class="lista-perfil">
+            <li><a href="{% url 'perfil' %}" >{{ usuario.username }}</a></li>
+            <li><a href="{% url 'ofertarMaterial' %}">Ofertar material</a></li>
+            <li><a href="{% url 'index' %}">Cerrar Sesión</a></li>
+        </ul>
+    </aside>
+    <footer>
+        <p>&copy; 2024 Tienda de Materiales de Construcción. Todos los derechos reservados.</p>
+        <p>Síguenos en nuestras redes sociales:</p>
+        <p>
+            <a href="">Facebook</a> | 
+            <a href="#">Instagram</a> | 
+            <a href="#">Twitter</a>
+        </p>
+    </footer>
+     <script src="{% static 'perfil.js' %}"></script>
+   
+</body>
+</html>

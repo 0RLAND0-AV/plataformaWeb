@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda de Materiales de Construcción</title>
-    <link rel="stylesheet" href="ofertar-material.css">
-    
+    <!-- Cargar la etiqueta 'static' -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'ofertarMaterial.css'%}">  
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -14,7 +15,7 @@
 </head>
 <body>
     <header>
-        <img src="LogoIS_Oficial.png" alt="Logo de la Tienda" class="header-image">
+        <img src="{% static "LogoIS_Oficial.png"%}" alt="Logo de la Tienda" class="header-image">
         <h1></h1>
         <input type="checkbox" id="menu-toggle" class="menu-toggle">
         <label for="menu-toggle" class="menu-icon">
@@ -24,11 +25,12 @@
         </label>
         <nav>
             <ul class="nav-list" id="nav-list">
-                <li><a href="#home">Inicio <ion-icon name="home-outline"></ion-icon> </a></li>
+                <li><a href="{% url 'index' %}" >Inicio <ion-icon name="home-outline"></ion-icon> </a></li>
+                <!-- <li><a href="#notificaciones">Notificaciones <ion-icon name="notifications-circle-outline"></ion-icon> </a></li> -->
                 <li><a href="#carrito"> Carrito <ion-icon name="cart-outline"></ion-icon></a> </li>
-                <li><a href="ofertar-material.html">User1 <ion-icon name="person-circle-outline"></ion-icon> </a></li>
+                <li><a href="{% url 'perfil' %}">{{ usuario.username }} <ion-icon name="person-circle-outline"></ion-icon></a></li>
 
-        </nav> 
+        </nav>  
         <div class="search-container">
             <input type="text" placeholder="Buscar productos..." class="search-input">
             <button class="search-button">Buscar <ion-icon name="search-outline"></ion-icon></button>
@@ -46,18 +48,20 @@
         <form id="ofertaForm" action="procesar_oferta.py" method="post">
             <div class="form-group inline">
                 <label for="departamento">Departamento:</label>
+                
                 <select id="departamento" name="departamento" required>
                     <option value="" disabled selected>Seleccionar Departamento</option>
-                    <option value="La Paz" data-provincias='["Murillo", "Los Andes", "Franz Tamayo", "Omasuyas", "Manco Kapac", "Muñecas", "Larecaja", "Caranavi", "Nor Yungas", "Sud Yungas", "Gualberto Villarroel"]'>La Paz</option>
-                    <option value="Cochabamba" data-provincias='["Cercado", "Chapare", "Quillacollo", "Esteban Arce", "Capinota", "Ayopaya", "Mizque", "Arque", "Carrasco", "Punata"]'>Cochabamba</option>
-                    <option value="Santa Cruz" data-provincias='["Andrés Ibáñez", "Chiquitos", "Guarayos", "Ñuflo de Chávez", "Velasco", "Ángel Sandoval", "Germán Busch"]'>Santa Cruz</option>
-                    <option value="Tarija" data-provincias='["Cercado", "Gran Chaco", "Aniceto Arce", "Eustaquio Méndez", "José María Avilés"]'>Tarija</option>
-                    <option value="Oruro" data-provincias='["Oruro", "Carangas", "Ladislao Cabrera", "Tomas Barrón", "Sebastián Pagador"]'>Oruro</option>
-                    <option value="Potosi" data-provincias='["Tomás Frías", "Nor Lípez", "Sud Lípez", "Daniel Campos", "Antonio Quijarro", "Potosí", "Chayanta", "Rada", "Alonso de Ibáñez"]'>Potosí</option>
-                    <option value="Pando" data-provincias='["Federico Román", "Madre de Dios", "Nicolás Suárez"]'>Pando</option>
-                    <option value="Beni" data-provincias='["Cercado", "Vaca Diez", "Marbán", "Moxos", "Yacuma", "Mamoré", "Gutiérrez"]'>Beni</option>
-                    <option value="Chuquisaca" data-provincias='["Sucre", "Yamparáez", "Azurduy", "Zudáñez", "Cinti", "Hernando Siles", "Luis Calvo"]'>Chuquisaca</option>
+                    <option value="Chuquisaca" data-provincias='["Azurduy", "Belisario Boeto", "Hernando Siles", "Jaime Zudáñez", "Luis Calvo", "Nor Cinti", "Oropeza", "Sud Cinti", "Tomina", "Yamparáez"]'>Chuquisaca</option>
+                    <option value="La Paz" data-provincias='["Abel Iturralde", "Aroma", "Bautista Saavedra", "Caranavi", "Eliodoro Camacho", "Franz Tamayo", "Gualberto Villarroel", "Ingavi", "Inquisivi", "José Manuel Pando", "Larecaja", "Loayza", "Los Andes", "Manco Kapac", "Muñecas", "Nor Yungas", "Omasuyos", "Pacajes", "Pedro Domingo Murillo", "Sud Yungas"]'>La Paz</option>
+                    <option value="Cochabamba" data-provincias='["Arani", "Arque", "Ayopaya", "Bolívar", "Campero", "Capinota", "Carrasco", "Cercado", "Chapare", "Esteban Arce", "Germán Jordán", "Mizque", "Punata", "Quillacollo", "Tapacarí", "Tiraque"]'>Cochabamba</option>
+                    <option value="Santa Cruz" data-provincias='["Andrés Ibáñez", "Ángel Sandóval", "Chiquitos", "Cordillera", "Florida", "Germán Busch", "Guarayos", "Ichilo", "Manuel María Caballero", "Ñuflo de Chávez", "Obispo Santistevan", "Sara", "Tomás Frías", "Vallegrande", "Velasco"]'>Santa Cruz</option>
+                    <option value="Oruro" data-provincias='["Atahuallpa", "Carangas", "Cercado", "Dalence", "Eduardo Avaroa", "Ladislao Cabrera", "Litoral", "Mejillones", "Nor Carangas", "Pantaleón Dalence", "Poopó", "Sabaya", "Sajama", "Sebastián Pagador", "Sud Carangas", "Tomas Barrón"]'>Oruro</option>
+                    <option value="Potosí" data-provincias='["Alonso de Ibáñez", "Antonio Quijarro", "Bernardino Bilbao", "Charcas", "Chayanta", "Cornelio Saavedra", "Daniel Campos", "Enrique Baldivieso", "José María Linares", "Modesto Omiste", "Nor Chichas", "Nor Lípez", "Rafael Bustillo", "Sud Chichas", "Sud Lípez", "Tomás Frías"]'>Potosí</option>
+                    <option value="Tarija" data-provincias='["Aniceto Arce", "Avilés", "Burdet O'Connor", "Cercado", "Gran Chaco", "José María Avilés"]'>Tarija</option>
+                    <option value="Beni" data-provincias='["Cercado", "Antonio Vaca Díez", "General José Ballivián", "Iténez", "Mamoré", "Marbán", "Moxos", "Yacuma"]'>Beni</option>
+                    <option value="Pando" data-provincias='["Abuná", "Federico Román", "Madre de Dios", "Manuripi", "Nicolás Suárez"]'>Pando</option>
                 </select>
+                
                 
                 <label for="provincia">Provincia:</label>
                 <select id="provincia" name="provincia" required>
@@ -132,18 +136,14 @@
             <div class="button-container">
                 <button type="submit">Ofertar</button>
                 <button type="button">Cancelar</button>
+            
+                
             </div>
         </form>
     </div>
     
-
-
     
-    
-
-
-
-    
+ 
 
     <footer>
         <p>&copy; 2024 Tienda de Materiales de Construcción. Todos los derechos reservados.</p>
@@ -157,7 +157,7 @@
 
 
 
-
-    <script src="ofertar-material.js"></script>
+    <script src="{% static 'ofertarMaterial.js' %}" ></script>
+    
 </body>
 </html>

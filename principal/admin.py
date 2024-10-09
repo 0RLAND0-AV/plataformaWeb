@@ -4,9 +4,10 @@ from .models import Category ,Favorite,Notification,Order,Product,PurchaseHistor
 # Register your models here.
 
 class UserAdmin(admin.ModelAdmin):
+    exclude = ('user_id',)
     fields=["username","numeroCelular","imagenPerfil","email","password","created_at","account_status","role"]
     list_display =["username","email","created_at"] #lo que se va mostrar
-admin.site.register(User,UserAdmin)#para registrar 1 forma
+    admin.site.register(User,UserAdmin)#para registrar 1 forma
 
 @admin.register(Category)#forma para registrar 2
 class CategoriaAdmin(admin.ModelAdmin):#lo que se puede editar

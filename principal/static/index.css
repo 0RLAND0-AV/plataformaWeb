@@ -282,7 +282,10 @@ h2{
 background-color: #03a678 !important; /* Cambia el color de fondo al pasar el cursor */
 color: #dfdfdf !important; /* Cambia el color del texto al pasar el cursor */
 }
-
+.sin-punto {
+    list-style-type: none; /* Elimina las viñetas */
+    
+}
 
 /* Acordeón responsivo */
 @media (max-width: 768px) {

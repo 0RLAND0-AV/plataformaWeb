@@ -28,6 +28,9 @@ urlpatterns = [
     path('',IndexView , name= 'index'),
     path('perfil/', PerfilView, name='perfil'),
     path('ofertarMaterial/',OfertarMaterialView , name ='ofertarMaterial'),
+    #path('procesar_oferta/', procesar_oferta, name='procesar_oferta'),
+    #path('ofertar/', procesar_oferta, name='procesar_oferta'),
+
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

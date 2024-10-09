@@ -1,10 +1,12 @@
 from django.db import models
 from django.utils import timezone
+import uuid
 
 # Create your models here.
 # aqui creo mi modelo de la base de datos
 
 class User(models.Model):
+    user_id = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)  # Genera un ID único para cada usuario
     username = models.CharField(max_length=150, unique=True,null= False ,blank=False)
     numeroCelular = models.CharField(max_length=15,default='00000000')  # Número de teléfono (ajusta el tamaño según sea necesario)
     imagenPerfil = models.ImageField(upload_to='profile_pictures/', blank=True, null=True)  # Ruta para la imagen de perfil
@@ -45,7 +47,7 @@ class Product(models.Model):
     product_status = models.CharField(max_length=50, blank=True, null=True)
     publication_status = models.CharField(max_length=50, blank=True, null=True)
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)
-    cantidad = models.IntegerField(default=0)
+    image = models.ImageField(upload_to='product_images/', null=True, blank=True)
 
     class Meta:
         db_table = "Productos"

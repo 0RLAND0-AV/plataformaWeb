@@ -23,14 +23,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-(@j4=to5c*fvi=6h8tff2hf5oef7!wda+0-c#+4$gf1sn0s32f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [ 'PabloGo.pythonanywhere.com', 'localhost']
+
+
 
 # Media
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'profile_pictures')
+#MEDIA_ROOT = os.path.join(BASE_DIR, 'profile_pictures')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Application definition
 

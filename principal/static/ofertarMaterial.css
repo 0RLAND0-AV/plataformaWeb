@@ -159,12 +159,6 @@ ion-icon{
     font-size: 16px; /* Tamaño de fuente reducido */
 }
 
-
-
-
-
-
-
 .formulario-ofertar-material select,
 .formulario-ofertar-material input {
     width: 100%; /* Ancho completo */
@@ -315,6 +309,9 @@ textarea {
     width: 65px;
     height: 40px;
 }
+
+
+
 
 
 

@@ -64,6 +64,7 @@
         <a href="#products" class="btn">Ver Productos</a>
     </section>
     <!-- Menu de categorias con Boostrap Armando-->
+    <!-- Menu de categorias con Boostrap Armando-->
     <div class="accordion accordion-left verde" id="accordionExample">
         <h3>CATEGORIAS</h3>
         <div class="accordion-item verde">
@@ -74,48 +75,13 @@
             </h2>
             <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                   <ul class="sin-punto">
-                    <li><button class="btn custom-btn" style="background: transparent; border: none;">Coboce</button></li> 
-                    <li><button class="btn custom-btn" style="background: transparent; border: none;">Emisa</button></li> 
-                    <li><button class="btn custom-btn" style="background: transparent; border: none;">Camba</button></li>    
-                    <li><button class="btn custom-btn" style="background: transparent; border: none;">Soboce</button></li>                  
-                   </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="accordion-item verde">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed verde" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    ARENA
-                </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <ul class="sin-punto">
-                        <li><button class="btn custom-btn" style="background: transparent; border: none;">Arenilla</button></li> 
-                        <li><button class="btn custom-btn" style="background: transparent; border: none;">Graba</button></li>    
-                        <li><button class="btn custom-btn" style="background: transparent; border: none;">Arena</button></li> 
-                        <li><button class="btn custom-btn" style="background: transparent; border: none;">Grabilla</button></li>                  
-                       </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="accordion-item verde">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed verde" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    BLOQUES
-                </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <ul class="sin-punto">
-                        <li><button class="btn custom-btn" style="background: transparent; border: none;">Bloque de Cemento</button></li> 
-                        <li><button class="btn custom-btn" style="background: transparent; border: none;">Bloque de Concreto</button></li> 
-                        <li><button class="btn custom-btn" style="background: transparent; border: none;">Bloque de Arcilla</button></li>   
-                                        
-                    </ul>
+                   <ul class="sin-punto">                 
+                    
+                    <li><button class="btn custom-btn" style="background: transparent; border: none;" data-category="Cemento" data-subcategory="Coboce">Coboce</button></li>
+                    <li><button class="btn custom-btn" style="background: transparent; border: none;" data-category="Cemento" data-subcategory="Emisa">Emisa</button></li>
+                    <li><button class="btn custom-btn" style="background: transparent; border: none;" data-category="Cemento" data-subcategory="Camba">Camba</button></li>
+                    <li><button class="btn custom-btn" style="background: transparent; border: none;" data-category="Cemento" data-subcategory="Soboce">Soboce</button></li>
+                </ul>
                 </div>
             </div>
         </div>
@@ -123,14 +89,16 @@
         <div class="accordion-item verde">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed verde" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    VARILLAS
+                    ACERO
                 </button>
             </h2>
             <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                     <ul class="sin-punto">
-                        <li><button class="btn" style="background: transparent; border: none;">Varilla de acero</button></li> 
-                        <li><button class="btn" style="background: transparent; border: none;">Varilla de fibra</button></li>                                      
+                        <li><button class="btn custom-btn" style="background: transparent; border: none;" data-category="Acero" data-subcategory="Laminas">Laminas</button></li>
+                        <li><button class="btn custom-btn" style="background: transparent; border: none;" data-category="Acero" data-subcategory="Barrilla">Barrila</button></li>
+                        <li><button class="btn custom-btn" style="background: transparent; border: none;" data-category="Acero" data-subcategory="Alambron">Alambron</button></li>
+                        <li><button class="btn custom-btn" style="background: transparent; border: none;" data-category="Cemento" data-subcategory="Perfiles">Perfiles</button></li>
                     </ul>
                 </div>
             </div>
@@ -139,16 +107,14 @@
         <div class="accordion-item verde">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed verde" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                    REVESTIMIENTOS
+                    TEJAS Y CUBIERTAS
                 </button>
             </h2>
             <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                     <ul class="sin-punto">
-                        <li><button class="btn" style="background: transparent; border: none;"></button></li> 
-                        <li><button class="btn" style="background: transparent; border: none;"></button></li> 
-                        <li><button class="btn" style="background: transparent; border: none;"></button></li>    
-                        <li><button class="btn" style="background: transparent; border: none;"></button></li>                  
+                        <li><button class="btn custom-btn" style="background: transparent; border: none;" data-category="Tejas y Cubiertas" data-subcategory="Tejas">Tejas</button></li>
+                        <li><button class="btn custom-btn" style="background: transparent; border: none;" data-category="Tejas y Cubiertas" data-subcategory="Canaletas">Canaletas</button></li>
                     </ul>
                 </div>
             </div>
@@ -157,16 +123,17 @@
         <div class="accordion-item verde">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed verde" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                    TUBERIAS
+                    CEMENTO Y COMPLEMENTO
                 </button>
             </h2>
             <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                     <ul class="sin-punto">
-                        <li><button class="btn" style="background: transparent; border: none;"></button></li> 
-                        <li><button class="btn" style="background: transparent; border: none;"></button></li> 
-                        <li><button class="btn" style="background: transparent; border: none;"></button></li>    
-                        <li><button class="btn" style="background: transparent; border: none;"></button></li>                  
+                       
+                        <li><button class="btn custom-btn" style="background: transparent; border: none;" data-category="Cemento y Complemeto" data-subcategory="Cemento">Cemento</button></li>
+                        <li><button class="btn custom-btn" style="background: transparent; border: none;" data-category="Cemento y Complemeto" data-subcategory="Yeso">Yeso</button></li>
+                        <li><button class="btn custom-btn" style="background: transparent; border: none;" data-category="Cemento y Complemeto" data-subcategory="Cal">Cal</button></li>
+                        <li><button class="btn custom-btn" style="background: transparent; border: none;" data-category="Cemento y Complemeto" data-subcategory="Mortero">Mortero</button></li>    
                     </ul>
                 </div>
             </div>
@@ -175,16 +142,14 @@
         <div class="accordion-item verde">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed verde" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                    ELECTRICOS
+                    LADRILLOS Y BLOQUES
                 </button>
             </h2>
             <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    <ul class="sin-punto">
-                        <li><button class="btn" style="background: transparent; border: none;"></button></li> 
-                        <li><button class="btn" style="background: transparent; border: none;"></button></li> 
-                        <li><button class="btn" style="background: transparent; border: none;"></button></li>    
-                        <li><button class="btn" style="background: transparent; border: none;"></button></li>                  
+                    <ul class="sin-punto"> 
+                        <li><button class="btn custom-btn" style="background: transparent; border: none;" data-category="Ladrillos y Bloque" data-subcategory="Ladrillos">Ladrillos</button></li>
+                        <li><button class="btn custom-btn" style="background: transparent; border: none;" data-category="Ladrillos y Bloques" data-subcategory="Bloques">Bloques de Concreto</button></li>
                     </ul>
                 </div>
             </div>
@@ -193,233 +158,55 @@
         <div class="accordion-item verde">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed verde" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                    TECHOS
+                    ARENAS
                 </button>
             </h2>
             <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    <ul class="sin-punto">
-                        <li><button class="btn custom-btn" style="background: transparent; border: none;">Calaminas ondulada</button></li> 
-                        <li><button class="btn custom-btn" style="background: transparent; border: none;">Calamina recta</button></li> 
-                        <li><button class="btn custom-btn" style="background: transparent; border: none;">Policarbonato</button></li>    
-                        <li><button class="btn custom-btn" style="background: transparent; border: none;"> calamina plastica</button></li>                  
+                    <ul class="sin-punto"> 
+                        
+                        <li><button class="btn custom-btn" style="background: transparent; border: none;" data-category="Arenas" data-subcategory="Cascajo">Cascajo</button></li>
+                        <li><button class="btn custom-btn" style="background: transparent; border: none;" data-category="Arenas" data-subcategory="Grava">Grava</button></li>
+                        <li><button class="btn custom-btn" style="background: transparent; border: none;" data-category="Arenas" data-subcategory="Fina">Fina</button></li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div class="accordion-item verde">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed verde" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                    AISLANTES
-                </button>
-            </h2>
-            <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <ul class="sin-punto">
-                        <li><button class="btn custom-btn" style="background: transparent; border: none;">Termico</button></li> 
-                        <li><button class="btn custom-btn" style="background: transparent; border: none;">Acustico</button></li> 
-                        <li><button class="btn custom-btn" style="background: transparent; border: none;">Termo Acustico</button></li>    
-                        <li><button class="btn custom-btn" style="background: transparent; border: none;">Fibra</button></li>                  
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="accordion-item verde">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed verde" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                    REVESTIMIENTOS
-                </button>
-            </h2>
-            <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <ul class="sin-punto">
-                        <li><button class="btn" style="background: transparent; border: none;"></button></li> 
-                        <li><button class="btn" style="background: transparent; border: none;"></button></li> 
-                        <li><button class="btn" style="background: transparent; border: none;"></button></li>    
-                        <li><button class="btn" style="background: transparent; border: none;"></button></li>                  
-                    </ul>
-                </div>
-            </div>
-        </div>
     </div>
     <!-- Seccion de productos ofertados -->
-    <section id="products" class="product-grid">
-         <!-- <h2></h2> --> 
-         <div class="product-card" id="category1">
-            <img src="{% static "imagen1IS.jpg"%}" alt="Cemento">
-            <h3>Cemento</h3>
-            <button class="btn btn-outline-success" type="button" class="btn btn-secondary" 
-                    data-bs-toggle="popover" data-bs-placement="bottom"
-                    data-bs-trigger="focus"
-                    data-bs-custom-class="custom-popover"
-                    data-bs-title="CEMENTO"
-                    data-bs-content="Cemento para tu Casita, solo es una bolsa.">
+    <!-- Seccion de productos ofertados -->
+    <!-- Sección de productos ofertados -->
+<section id="products" class="product-grid">
+    {% for producto in productos %}
+    <div class="product-card" id="{{ producto.category.id }}">
+        <img src="{{ producto.image.url }}" alt="{{ producto.name }}">
+        <h3>{{ producto.name }}</h3>
+        <h4>{{ producto.category }}</h4>
+        <button class="btn btn-outline-success" type="button" class="btn btn-secondary" 
+                data-bs-toggle="popover" data-bs-placement="bottom"
+                data-bs-trigger="focus"
+                data-bs-custom-class="custom-popover"
+                data-bs-title="{{ producto.name|upper }}"
+                data-bs-content="{{ producto.description }}">
             Más información</button>
-            <p>Descripción: Cemento de alta calidad para tus proyectos.</p>
-            <p class="price">50 bs</p>
-            <button type="button" class="btn add-to-cart-btn" class="btn btn-primary" id="liveToastBtn" data-product="Cemento" data-price="50">Agregar al carrito</button>
-            <div class="toast-container position-fixed bottom-0 end-0 p-3">
-                <div id="liveToast" class="toast" role="alert" data-bs-delay="2000" aria-live="assertive" aria-atomic="true">
-                  <div class="toast-body text-bg-primary">
+        <p>Descripción: {{ producto.description }}</p>
+        <p class="price">{{ producto.price }} bs</p>
+        <button type="button" class="btn add-to-cart-btn" class="btn btn-primary" 
+                id="liveToastBtn" 
+                data-product="{{ producto.name }}" 
+                data-price="{{ producto.price }}">Agregar al carrito</button>
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div id="liveToast" class="toast" role="alert" data-bs-delay="2000" aria-live="assertive" aria-atomic="true">
+                <div class="toast-body text-bg-primary">
                     Se Agregó Correctamente al Carrito!
-                  </div>
                 </div>
             </div>
-        </div>   
-
-        <div class="product-card" id="category1">
-            <img src="{% static "imagen2IS.jpeg"%}" alt="Ladrillo">
-            <h3>Ladrillo</h3>
-            <button class="btn btn-outline-success" type="button" class="btn btn-secondary" 
-                    data-bs-toggle="popover" data-bs-placement="bottom"
-                    data-bs-trigger="focus"
-                    data-bs-custom-class="custom-popover"
-                    data-bs-title="LADRILLO"
-                    data-bs-content="Ladrillo para tu Casita">
-            Más información</button>
-            <p>Descripción: Ladrillo de alta calidad para tus proyectos.</p>
-            <p class="price">50 bs</p>
-            <button type="button" class="btn add-to-cart-btn" class="btn btn-primary" id="liveToastBtn" data-product="Cemento" data-price="50">Agregar al carrito</button>
-            <div class="toast-container position-fixed bottom-0 end-0 p-3">
-                <div id="liveToast" class="toast" role="alert" data-bs-delay="2000" aria-live="assertive" aria-atomic="true">
-                  <div class="toast-body text-bg-primary">
-                    Se Agregó Correctamente al Carrito!
-                  </div>
-                </div>
-            </div>
-        </div>   
-
-        <div class="product-card" id="category1">
-            <img src= "{% static 'imagen6IS.jpeg' %}" alt="Canaletas">
-            <h3>Canaletas</h3>
-            <button class="btn btn-outline-success" type="button" class="btn btn-secondary" 
-                    data-bs-toggle="popover" data-bs-placement="bottom"
-                    data-bs-trigger="focus"
-                    data-bs-custom-class="custom-popover"
-                    data-bs-title="CANALETAS"
-                    data-bs-content="Canaletas para tu Casita, solo es una bolsa.">
-            Más información</button>
-            <p>Descripción: Canaletas de alta calidad para tus proyectos.</p>
-            <p class="price">50 bs</p>
-            <button type="button" class="btn add-to-cart-btn" class="btn btn-primary" id="liveToastBtn" data-product="Cemento" data-price="50">Agregar al carrito</button>
-            <div class="toast-container position-fixed bottom-0 end-0 p-3">
-                <div id="liveToast" class="toast" role="alert" data-bs-delay="2000" aria-live="assertive" aria-atomic="true">
-                  <div class="toast-body text-bg-primary">
-                    Se Agregó Correctamente al Carrito!
-                  </div>
-                </div>
-            </div>
-        </div>   
-
-        <div class="product-card" id="category1">
-            <img src="{% static 'imagen5IS.jpg' %}" alt="Bloques">
-            <h3>Bloques de Cemento</h3>
-            <button class="btn btn-outline-success" type="button" class="btn btn-secondary" 
-                    data-bs-toggle="popover" data-bs-placement="bottom"
-                    data-bs-trigger="focus"
-                    data-bs-custom-class="custom-popover"
-                    data-bs-title="BLOQUES"
-                    data-bs-content="Cemento para tu Casita, solo es una bolsa.">
-            Más información</button>
-            <p>Descripción: Bloques de cemento de alta calidad para tus proyectos.</p>
-            <p class="price">50 bs</p>
-            <button type="button" class="btn add-to-cart-btn" class="btn btn-primary" id="liveToastBtn" data-product="Cemento" data-price="50">Agregar al carrito</button>
-            <div class="toast-container position-fixed bottom-0 end-0 p-3">
-                <div id="liveToast" class="toast" role="alert" data-bs-delay="2000" aria-live="assertive" aria-atomic="true">
-                  <div class="toast-body text-bg-primary">
-                    Se Agregó Correctamente al Carrito!
-                  </div>
-                </div>
-            </div>
-        </div>   
-
-
-         <div class="product-card" id="category2">
-            <img src="{% static 'imagen0IS.jpeg' %}" alt="Cemento">
-            <h3>Cemento</h3>
-            <button>Mas informacion</button>
-            <p>Descripción: Cemento resistentes para construcción de muros.</p>
-            <p class="price">50 bs</p>
-            <button class="btn">Carrito</button>
         </div>
-        <div class="product-card" id="category1">
-            <img src="{% static 'imagen1IS.jpg' %}"  alt="Cemento">
-            <h3>Cemento</h3>
-            <button>Mas informacion</button>
-            <p>Descripción: Cemento de alta calidad para tus proyectos.</p>
-            <p class="price">500 bs</p>
-            <button class="btn">Carrito</button>
-            <!--   <button>  <ion-icon name="logo-whatsapp"></ion-icon> </button>
-            <button><ion-icon name="arrow-redo-outline"></ion-icon></button> -->
-
-        </div>
-        <div class="product-card" id="category2">
-            <img src="{% static 'imagen2IS.jpeg' %}" alt="Ladrillos">
-            <h3>Ladrillos</h3>
-            <button>Mas informacion</button>
-            <p>Descripción: Ladrillos resistentes para construcción de muros.</p>
-            <p class="price">50 bs</p>
-            <button class="btn">Carrito</button>
-        </div>
-        <div class="product-card" id="category3">
-            <img src="{% static 'imagen3IS.jpeg' %}"  alt="Arena">
-            <h3>Arena</h3>
-            <button>Mas informacion</button>
-            <p>Descripción: Arena de calidad para mezclar con cemento.</p>
-            <p class="price">300 bs</p>
-            <button class="btn">Carrito</button>
-        </div>
-        <div class="product-card" id="category4">
-            <img src="{% static 'imagen3IS.jpeg' %}" alt="Gravilla">
-            <h3>Gravilla</h3>
-            <button>Mas informacion</button>
-            <p>Descripción: Gravilla ideal para bases y rellenos.</p>
-            <p class="price">400bs</p>
-            <button class="btn">Carrito</button>
-        </div>
-        <div class="product-card" id="category4">
-            <img src="{% static 'imagenIS4.jpeg' %}" alt="Teja">
-            <h3>Teja</h3>
-            <button>Mas informacion</button>
-            <p>Descripción: Teja ideal para bases y rellenos.</p>
-            <p class="price">400bs</p>
-            <button class="btn">Carrito</button>
-        </div>
-        <div class="product-card" id="category4">
-            <img src="{% static 'imagen7IS.jpg' %}" alt="Yeso">
-            <h3>Yeso</h3>
-            <button>Mas informacion</button>
-            <p>Descripción: Yeso ideal para bases y rellenos.</p>
-            <p class="price">400bs</p>
-            <button class="btn">Carrito</button>
-        </div>
-        <div class="product-card" id="category4">
-            <img src="{% static 'imagen5IS.jpg' %}" alt="Concreto">
-            <h3>Bloques de Concreto</h3>
-            <button>Mas informacion</button>
-            <p>Descripción: Concreto ideal para bases y rellenos.</p>
-            <p class="price">400bs</p>
-            <button class="btn">Carrito</button>
-        </div>
-        <div class="product-card" id="category4">
-            <img src="{% static 'imagen6IS.jpeg' %}" alt="Canaletas">
-            <h3>Canaletas</h3>
-            <button>Mas informacion</button>
-            <p>Descripción: Canaletas ideal para bases y rellenos.</p>
-            <p class="price">400bs</p>
-            <button class="btn">Carrito</button>
-        </div>
-        <div class="product-card" id="category4">
-            <img src="{% static 'imagen6IS.jpeg' %}" alt="Canaletas">
-            <h3>Canaletas</h3>
-            <button>Mas informacion</button>
-            <p>Descripción: Canaletas ideal para bases y rellenos.</p>
-            <p class="price">400bs</p>
-            <button class="btn">Carrito</button>
-        </div>
-    </section>
+    </div>   
+    {% endfor %}
+</section>
+ 
 
     <section id="about" class="about-section">
         <h2>Sobre Nosotros</h2>
@@ -454,6 +241,7 @@
     </footer>
     <script src="{% static 'buscadorProductos.js' %}" ></script>
     <script src="{% static 'carrito.js' %}" ></script>
+    <script src="{% static 'buscadorDeCategorias.js' %}" ></script>
 
 <!--Armando-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

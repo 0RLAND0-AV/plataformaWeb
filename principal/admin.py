@@ -7,7 +7,7 @@ class UserAdmin(admin.ModelAdmin):
     exclude = ('user_id',)
     fields=["username","numeroCelular","imagenPerfil","email","password","created_at","account_status","role"]
     list_display =["username","email","created_at"] #lo que se va mostrar
-    admin.site.register(User,UserAdmin)#para registrar 1 forma
+admin.site.register(User,UserAdmin)#para registrar 1 forma
 
 @admin.register(Category)#forma para registrar 2
 class CategoriaAdmin(admin.ModelAdmin):#lo que se puede editar
@@ -16,7 +16,7 @@ class CategoriaAdmin(admin.ModelAdmin):#lo que se puede editar
 
 @admin.register(Product)
 class ProductoAdmin(admin.ModelAdmin):
-    fields=["user","name","description","price","created_at","province","address","product_status","publication_status","category","cantidad"]
+    fields=["user","name","description","price","created_at","province","address","product_status","publication_status","category","image"]
     list_display =["user","name","price","created_at"]
 
 @admin.register(Order)
